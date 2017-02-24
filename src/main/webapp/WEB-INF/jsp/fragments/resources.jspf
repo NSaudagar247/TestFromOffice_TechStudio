@@ -1,0 +1,28 @@
+<%-- jstl defined resources --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%-- Built-in Scripts --%>
+<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" var="jqueryMinJs" />
+<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" var="bootstrapMinJs" />
+<c:url value="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" var="angularMinJs" />
+<c:url value="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js" var="angularRouteMinJs" />
+<%-- <c:url value="/js/bootstrapvalidator.min.js" var="bootstrapValidatorJs" /> --%>
+<%-- <c:url value="/js/validator.js" var="validatorJs" /> --%>
+
+<%-- Custom Scripts --%>
+<c:url value="/js/app.js" var="appJs" />
+<c:url value="/js/editor.js" var="editorJs" />
+<c:url value="/modules/inquiry/inquiryController.js" var="inquiryCtrlJs" />
+<c:url value="/modules/blog/blogController.js" var="blogCtrlJs" />
+
+
+
+<%-- Built-in CSS --%>
+<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" var="bootstrapMinCss" />
+<c:url value="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" var="fontAwesomeCss" />
+<%-- <c:url value="/css/bootstrap-theme.min.css" var="bootstrapThemeMinCss" /> --%>
+<%-- <c:url value="/css/bootstrapValidator.min.css" var="bootstrapValidatorMinCss" /> --%>
+
+<%-- Custom CSS --%>
+<c:url value="/css/style.css" var="styleCss" />
+<c:url value="/css/editor.css" var="editorCss" />

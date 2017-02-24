@@ -1,0 +1,77 @@
+
+<h2>Write a Blog</h2>
+
+<h3>{{message}}</h3>
+
+
+<!-- <h4>Leave a Comment:</h4> -->
+<!-- <form role="form"> -->
+<!-- 	<div class="form-group"> -->
+<!-- 		<textarea class="form-control" rows="3" required></textarea> -->
+<!-- 	</div> -->
+<!-- 	<button type="submit" class="btn btn-success">Submit</button> -->
+<!-- </form> -->
+<!-- <br><br> -->
+
+
+<!-- <p><span class="badge">2</span> Comments:</p><br> -->
+
+<!-- <div class="row"> -->
+<!--   <div class="col-sm-2 text-center"> -->
+<!--   </div> -->
+<!--   <div class="col-sm-10"> -->
+<!--     <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4> -->
+<!--     <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+<!--     <br> -->
+<!--   </div> -->
+<!--   <div class="col-sm-2 text-center"> -->
+<!--   </div> -->
+<!--   <div class="col-sm-10"> -->
+<!--     <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4> -->
+<!--     <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+<!--     <br> -->
+<!--     <p><span class="badge">1</span> Comment:</p><br> -->
+<!--     <div class="row"> -->
+<!--       <div class="col-sm-2 text-center"> -->
+<!--       </div> -->
+<!--       <div class="col-xs-10"> -->
+<!--         <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4> -->
+<!--         <p>Me too! WOW!</p> -->
+<!--         <br> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </div> -->
+
+<h2>College Blog</h2>
+<form name="blogForm">
+
+  <div class="form-group">
+    <label for="blogTitle">Blog Title:</label>
+    <input class="form-control" placeholder="Enter Blog Title" id="blogTitle" name="blogTitle" ng-model="blogTitle" required>
+  </div>
+  <div class="form-group">
+   <span style="color:red" ng-show="blogForm.blogTitle.$dirty && blogForm.blogTitle.$invalid">
+		<span ng-show="blogForm.blogTitle.$error.required">Blog Title is required.</span>
+	</span>
+  </div>
+
+  <div class="form-group">
+     <label for="blogStory">Blog Story:</label>
+  	 <textarea id="txtEditor" name="txtEditor" ng-model="txtEditor" placeholder="Enter Blog Story" 
+  	 	class="form-control input-no-width rounded shaded left clearboth" required></textarea> 
+  </div>
+  <div class="form-group">
+    <span style="color:red" ng-show="blogForm.txtEditor.$dirty && blogForm.txtEditor.$invalid">
+		<span ng-show="blogForm.txtEditor.$error.required">Blog Story is required.</span>
+	</span>
+  </div>
+
+  <button type="submit" class="btn btn-primary" ng-disabled="blogForm.blogTitle.$invalid || blogForm.blogStory.$invalid">Submit</button>
+</form>
+	     
+<script>
+	$(document).ready(function() {
+		$("#txtEditor").Editor();
+	});
+</script>
